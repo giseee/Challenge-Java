@@ -10,7 +10,7 @@ public class Card {
     private Brand brand;
     private LocalDate expirationDate;
 
-    public Card(String number, String cardholder, Brand brand, LocalDate expirationDate) {
+    public Card(String number, String cardholder,LocalDate expirationDate,Brand brand) {
         this.number = number;
         this.cardholder = cardholder;
         this.brand = brand;

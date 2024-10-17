@@ -9,7 +9,7 @@ public class Visa extends Brand {
 
     @Override
     public double calculateRate(LocalDate date) {
-        int digitosAnio = date.getYear() % 100;
-        return (double)  digitosAnio/date.getMonthValue();
+        int digitAnio = date.getYear() % 100;
+        return (double)  digitAnio/date.getMonthValue();
     }
 }
