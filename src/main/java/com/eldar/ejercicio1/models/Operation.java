@@ -2,8 +2,9 @@ package com.eldar.ejercicio1.models;
 
 import com.eldar.ejercicio1.exceptions.InvalidOperationException;
 
+import java.time.LocalDate;
+
 public class Operation {
-    private long id;
     private double amount;
     private Card card;
 
@@ -17,9 +18,17 @@ public class Operation {
         this.card = card;
     }
     public boolean isValid(double amount) {
-        return amount < 1000;
+        return (amount > 0 && amount < 1000);
     }
-    public String getInformacion() {
+
+    @Override
+    public String toString() {
         return "nombre: " + this.card.getBrand().getName() + " importe: " + this.amount;
+    }
+
+    public String calculateTotalRate()
+
+    {
+        return card.calculateTotalRate(this.amount);
     }
 }

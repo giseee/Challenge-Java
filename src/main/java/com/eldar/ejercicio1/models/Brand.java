@@ -11,6 +11,7 @@ public abstract class Brand {
     public Brand(String name) {
         this.name = name;
     }
+
     public double calculateRateWithValidation(LocalDate date) throws InvalidOperationException {
         if (date == null) {
             throw new IllegalArgumentException("La fecha no puede ser nula");
@@ -26,4 +27,5 @@ public abstract class Brand {
     public String getName() {
         return name;
     }
+
 }

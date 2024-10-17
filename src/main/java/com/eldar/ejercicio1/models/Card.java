@@ -40,6 +40,15 @@ public class Card {
         return "Las tarjetas son diferentes";
 
     }
+    public String calculateTotalRate(double amount)
+    {
+        if (amount < 0) {
+            throw new IllegalArgumentException("El monto no puede ser negativo");
+        }
+        double rateTotal= amount * (1 + brand.calculateRate(LocalDate.now()) / 100);
+        return brand.getName()+ " " + rateTotal;
+    }
+
     //getters
 
     public String getNumber() {
@@ -54,6 +63,7 @@ public class Card {
     public Brand getBrand() {
         return brand;
     }
+
     public void setBrand(Brand brand) {
         this.brand = brand;
     }

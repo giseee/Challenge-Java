@@ -1,6 +1,7 @@
-package com.eldar.ejercicio1.models;
+package com.eldar.ejercicio1;
 
 import com.eldar.ejercicio1.exceptions.InvalidOperationException;
+import com.eldar.ejercicio1.models.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -30,7 +31,7 @@ class OperationTest {
     @Test
     void getInformacion() throws InvalidOperationException {
         Operation op =new Operation(500,card);
-        assertEquals(op.getInformacion(),"nombre: VISA importe: 500.0");
+        assertEquals(op.toString(),"nombre: VISA importe: 500.0");
     }
     @Test
     void testCalculateRateVisa() throws InvalidOperationException {

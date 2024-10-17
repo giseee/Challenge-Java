@@ -1,5 +1,6 @@
-package com.eldar.ejercicio1.models;
+package com.eldar.ejercicio1;
 
+import com.eldar.ejercicio1.models.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -39,4 +40,9 @@ public class CardTest {
     void testCardIsEqual() {
         assertEquals(card.cardIsEqualTo(card2), "Las tarjetas son diferentes");
     }
+    @Test
+    void testCalculateTotalRate() {
+        Operation operation = new Operation(500, card);
+        assertEquals(operation.calculateTotalRate(), "VISA 512.0");}
+
 }
